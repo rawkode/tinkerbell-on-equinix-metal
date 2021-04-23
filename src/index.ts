@@ -5,7 +5,7 @@ export = async () => {
   const config = new pulumi.Config("");
 
   const project = await metal.getProject({
-    name: config.require("projectID"),
+    name: config.require("projectName"),
   });
 
   const vlan = new metal.Vlan("main", {
