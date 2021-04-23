@@ -15,6 +15,7 @@ gitfs_remotes:
       - root: saltstack/states
       - base: main
       - update_interval: 600
+  - https://github.com/saltstack-formulas/kubernetes-formula
 
 ext_pillar:
   - http_json:

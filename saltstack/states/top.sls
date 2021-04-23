@@ -1,3 +1,3 @@
 base:
   '*':
-    - docker
+    - k3s
