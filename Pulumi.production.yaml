@@ -1,0 +1,4 @@
+config:
+  equinix-metal:authToken:
+    secure: AAABAHUFu4U6UTeH4oSBkxkgUddKov7lfvFYe5b3mIZjYwtsgm5eK+KXtFsBrrNPAMS9TZW+eaZ1pAclgrEeOQ==
+  tinkerbell-on-equinix-metal:projectName: rawkode-tinkerbell
