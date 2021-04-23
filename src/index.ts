@@ -2,7 +2,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as metal from "@pulumi/equinix-metal";
 
 export = async () => {
-  const config = new pulumi.Config("");
+  const config = new pulumi.Config();
 
   const project = await metal.getProject({
     name: config.require("projectName"),
@@ -21,7 +21,7 @@ export = async () => {
     billingCycle: metal.BillingCycle.Hourly,
     projectId: project.id,
     userData: `#!/usr/bin/env sh
-git clone https://github.com/rawkode/tinkerbell-on-equinix-metal /opt/
+git clone https://github.com/rawkode/tinkerbell-on-equinix-metal /opt/tinkerbell-on-equinix-metal
 sh /opt/tinkerbell-on-equinix-metal/saltstack/bootstrap.sh
 `,
   });
